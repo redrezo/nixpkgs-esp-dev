@@ -89,6 +89,15 @@
 
             # The esp idf vscode extension seems to want pip, too
             pip
+
+            # ADDED STUFF
+            packaging
+            construct
+
+            # ble's compressed log testing tool
+            tree-sitter
+            tree-sitter-grammars.tree-sitter-c
+            # ---
           ]
           ++ (extraPythonPackages pythonPackages)
     )
