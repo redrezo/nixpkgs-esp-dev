@@ -13,6 +13,7 @@
     "openocd-esp32"
     "esp-rom-elfs"
   ],
+  patches ? [],
   extraPythonPackages ? (pythonPackages: [ ]),
   stdenv,
   lib,
@@ -101,6 +102,7 @@ let
     version = rev;
 
     inherit src;
+    inherit patches;
 
     # This is so that downstream derivations will have IDF_PATH set.
     setupHook = ./setup-hook.sh;
